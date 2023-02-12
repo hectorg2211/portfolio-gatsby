@@ -12,5 +12,5 @@ module.exports = {
       "projectId": "kc8fuu63",
       "dataset": "production"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp"]
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss"]
 };
