@@ -6,11 +6,17 @@ module.exports = {
     title: `Portfolio`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: [{
-    resolve: 'gatsby-source-sanity',
-    options: {
-      "projectId": "kc8fuu63",
-      "dataset": "production"
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss"]
-};
+  plugins: [
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        'projectId': 'kc8fuu63',
+        'dataset': 'production'
+      }
+    },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-postcss'
+  ]
+}

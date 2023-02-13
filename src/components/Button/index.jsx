@@ -2,7 +2,7 @@ import React from 'react'
 
 
 function Button({label, onClick}) {
-  const primaryButton = "py-2 px-4 bg-primary text-white"
+  const primaryButton = "py-2 px-4 bg-primary text-white font-semibold"
 
   return (
     <button type='button' onClick={onClick} className={primaryButton}>{label}</button>
