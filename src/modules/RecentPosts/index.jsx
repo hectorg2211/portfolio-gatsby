@@ -6,12 +6,12 @@ function RecentPosts(props){
     return (
         <div className='w-full bg-blue-50'>
             <div className='container m-auto flex flex-col items-start '>
-                <div className='flex justify-between m-auto w-full text-left px-5 pt-5'>
+                <div className='flex justify-between m-auto w-full text-left pt-5'>
                     <span className='text-2xl'>Recent posts</span>
                     <navigate to='/' className='font-semibold text-blue-600'>View all</navigate>
                     
                 </div>
-                <div className='flex flex-col w-full lg:flex-row gap-5 p-5 justify-center'>
+                <div className='flex flex-col w-full lg:flex-row gap-5 py-5 justify-center'>
                     <PostCard title={props.title} date={props.date} labels={props.labels} text={props.text}></PostCard>
                     <PostCard title={props.title} date={props.date} labels={props.labels} text={props.text}></PostCard>
                     <PostCard title={props.title} date={props.date} labels={props.labels} text={props.text}></PostCard>
