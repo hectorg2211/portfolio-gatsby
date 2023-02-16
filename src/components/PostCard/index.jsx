@@ -2,11 +2,11 @@ import React from 'react'
 
 function PostCard({title, date, labels, text}) {
     return(
-        <div className='flex flex-col max-w-sm gap-5 m-auto p-5 rounded bg-white'>
+        <div className='flex flex-col gap-5 m-auto p-5 rounded bg-white'>
             <div>
-                <h1 className='text-3xl font-semibold text-dark'> {title}</h1>
+                <h2 className='text-3xl font-semibold text-dark'> {title}</h2>
             </div>
-            <div className='flex flex-row w-full m-auto gap-3 justify-between'>
+            <div className='flex flex-row w-full m-auto gap-3'>
                 <p>{date}</p>
                 <p> | </p>
                 <p>{labels}</p>
