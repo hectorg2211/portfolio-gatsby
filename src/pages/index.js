@@ -8,7 +8,7 @@ const IndexPage = ({ modules }) => {
   console.log(modules)
   return (
     <>
-      <main className='flex flex-col gap-20'>
+      <main className='flex flex-col gap-16'>
         {modules.map((module, index) => {
             switch (module.type) {
               case 'Hero':
