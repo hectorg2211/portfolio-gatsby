@@ -2,7 +2,7 @@ import Hero from './index'
 
 export default {
   component: Hero,
-  title: 'Hero'
+  title: 'Modules/Hero'
 }
 
 const Template = args => <Hero {...args}/>
