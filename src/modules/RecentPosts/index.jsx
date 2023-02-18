@@ -6,7 +6,7 @@ function RecentPosts({posts}){
         <div className='w-full bg-blue-50'>
             <div className='container px-4 md:px-0 m-auto flex flex-col items-start '>
                 <div className='flex justify-between m-auto w-full text-left pt-5'>
-                    <span className='text-2xl'>Recent posts</span>
+                    <span className='text-md sm:text-2xl'>Recent posts</span>
                     <a href='/' className='font-semibold text-blue-600'>View all</a>
                     
                 </div>

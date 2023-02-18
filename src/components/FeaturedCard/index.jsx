@@ -12,7 +12,7 @@ function FeaturedCard({ project }) {
       </a>
 
       <div className='flex flex-col gap-4 sm:flex-[2_2_0%]'>
-        <h3 className='text-3xl font-semibold text-dark hover:text-primary transition-all'><a href='/'>{project.title}</a></h3>
+        <h3 className='text-2xl sm:text-3xl font-semibold text-dark hover:text-primary transition-all'><a href='/'>{project.title}</a></h3>
         <div className='flex items-center gap-5'>
           <span className='px-3 text-white bg-dark font-bold rounded-full'>{project.year}</span>
           <span className='text-gray-400 text-lg'>{project.type}</span>
