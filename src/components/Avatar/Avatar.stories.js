@@ -2,7 +2,7 @@ import Avatar from './index'
 
 export default {
   component: Avatar,
-  title: 'Avatar'
+  title: 'Components/Avatar'
 }
 
 const Template = args => <Avatar {...args}/>

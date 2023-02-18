@@ -2,7 +2,7 @@ import PostCard from './index';
 
 export default {
   component: PostCard,
-  title: 'PostCard',
+  title: 'Components/Post card',
 }
 
 const Template = (args) => <PostCard {...args} />

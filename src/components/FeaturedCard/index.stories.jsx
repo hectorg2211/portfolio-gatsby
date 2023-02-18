@@ -2,7 +2,7 @@ import FeaturedCard from './index'
 
 export default {
   component: FeaturedCard,
-  title: 'FeaturedCard',
+  title: 'Components/Featured card',
   decorators: [story => <div style={{ maxWidth: '800px', margin: 'auto' }}>{story()}</div>],
 }
 

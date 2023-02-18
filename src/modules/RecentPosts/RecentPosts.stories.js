@@ -2,7 +2,7 @@ import RecentPosts from './index'
 
 export default {
     component: RecentPosts,
-    title: 'RecentPosts'
+    title: 'Modules/RecentPosts'
 }
 
 const Template = args => <RecentPosts {...args}/>

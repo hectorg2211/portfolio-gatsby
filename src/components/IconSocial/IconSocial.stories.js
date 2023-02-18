@@ -2,7 +2,7 @@ import IconSocial from './index';
 
 export default {
     component: IconSocial,
-    title: 'IconSocial',
+    title: 'Components/Social icon',
 }
 
 const Template = (args) => <IconSocial {...args} />
