@@ -3,6 +3,7 @@ import Hero from '../modules/Hero'
 import FeaturedProjects from '../modules/FeaturedProjects'
 import RecentPosts from '../modules/RecentPosts'
 import Footer from '../modules/Footer'
+import { graphql } from 'gatsby'
 
 const IndexPage = ({ modules }) => {
   console.log(modules)
@@ -31,3 +32,6 @@ const IndexPage = ({ modules }) => {
 export default IndexPage
 
 export const Head = () => <title>Home Page</title>
+
+// export const pageQuery = graphql`
+// `

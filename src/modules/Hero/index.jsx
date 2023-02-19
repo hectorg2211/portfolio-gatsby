@@ -2,7 +2,7 @@ import React from 'react'
 import Avatar from '../../components/Avatar'
 import  Button  from '../../components/Button'
 
-function Hero({title, subtitle, imageSrc}) {
+function Hero({title, subtitle, imageSrc, buttonLabel}) {
   return (
     <div className='container m-auto pt-20 pb-6 sm:py-40 flex flex-col items-center md:items-start'>
       <div className='flex flex-col flex-col-reverse md:flex-row items-center gap-14 md:gap-40 mb-10 md:mb-0'>
@@ -16,7 +16,7 @@ function Hero({title, subtitle, imageSrc}) {
         </div>
       </div>
       
-      <Button label='Download Resume'/>
+      <Button label={buttonLabel}/>
     </div>
   )
 }
