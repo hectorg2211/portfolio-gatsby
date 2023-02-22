@@ -1,3 +1,4 @@
+import React from 'react'
 import RecentPosts from './index'
 
 export default {

@@ -9,14 +9,16 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    'storybook-addon-gatsby'
+    'storybook-addon-gatsby',
+    '@chakra-ui/storybook-addon'
   ],
   'framework': '@storybook/react',
   'core': {
     'builder': '@storybook/builder-webpack5'
   },
   'features' : {
-    'interactionsDebugger': true
+    'interactionsDebugger': true,
+    emotionAlias: false
   },
   webpackFinal: async (config) => {
     config.module.rules.push({

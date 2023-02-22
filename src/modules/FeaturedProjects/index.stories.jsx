@@ -1,3 +1,4 @@
+import React from 'react'
 import FeaturedProjects from './index'
 
 export default {

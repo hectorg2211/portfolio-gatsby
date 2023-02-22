@@ -1,3 +1,4 @@
+import React from 'react'
 import FeaturedCard from './index'
 
 export default {

@@ -1,3 +1,4 @@
+import React from 'react'
 import Home from '../index'
 import * as FeaturedProjectsStories from '../../modules/FeaturedProjects/index.stories'
 import * as RecentPostsStories from '../../modules/RecentPosts/RecentPosts.stories'
