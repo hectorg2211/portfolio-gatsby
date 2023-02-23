@@ -6,24 +6,23 @@ import Footer from '../modules/Footer'
 import { graphql } from 'gatsby'
 import Layout from '../modules/Layout'
 
-const IndexPage = ({ modules }) => {
-  console.log(modules)
+const IndexPage = ({data}) => {
   return (
     <Layout>
       <main className='flex flex-col gap-16'>
-        {/*{modules.map((module, index) => {*/}
-        {/*    switch (module.type) {*/}
-        {/*      case 'Hero':*/}
-        {/*        return <Hero key={index} {...module} />*/}
-        {/*      case 'Featured':*/}
-        {/*        return <FeaturedProjects key={index} {...module} />*/}
-        {/*      case 'RecentPosts':*/}
-        {/*        return <RecentPosts key={index} {...module} />*/}
-        {/*      default:*/}
-        {/*        return null*/}
-        {/*    }*/}
-        {/*  }*/}
-        {/*)}*/}
+        {data.sanityHomePage.modules.map((module, index) => {
+            switch (module._type) {
+              case 'hero':
+                return <Hero key={index} {...module} />
+              case 'Featured':
+                return <FeaturedProjects key={index} {...module} />
+              case 'RecentPosts':
+                return <RecentPosts key={index} {...module} />
+              default:
+                return null
+            }
+          }
+        )}
       </main>
     </Layout>
   )
@@ -33,5 +32,15 @@ export default IndexPage
 
 export const Head = () => <title>Home Page</title>
 
-// export const pageQuery = graphql`
-// `
+export const pageQuery = graphql`
+  query HomePage {
+    sanityHomePage(_type: {eq: "homePage"}) {
+      _type
+      _createdAt
+      _updatedAt
+      modules {
+        ...SanityHero
+      }
+    }
+  }
+`
