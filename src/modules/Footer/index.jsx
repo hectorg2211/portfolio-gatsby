@@ -4,7 +4,7 @@ import IconSocial from '../../components/IconSocial'
 
 function Footer(props){
     return (
-        <div className='w-full bg-white'>
+        <footer className='w-full bg-white'>
             <div className='container m-auto p-10 flex flex-col items-start '>
                 <div className='flex w-full flex-row gap-5 p-5 justify-center'>
                 <IconSocial style='transition ease-in-out hover:text-primary hover:scale-150' socialLink='https://www.google.com' icon='fa-brands fa-square-facebook' size='2x'/>
@@ -16,7 +16,7 @@ function Footer(props){
                     <span className='text-xs'>{props.text}</span>
                 </div>
             </div>
-        </div>
+        </footer>
 
 
     )

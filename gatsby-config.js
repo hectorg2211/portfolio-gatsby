@@ -10,8 +10,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        'projectId': 'kc8fuu63',
-        'dataset': 'production'
+        projectId: 'kc8fuu63',
+        dataset: 'production',
+        watchMode: true,
       }
     },
     'gatsby-plugin-image',
