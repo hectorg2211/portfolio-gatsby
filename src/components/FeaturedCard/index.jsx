@@ -1,14 +1,16 @@
 import React from 'react'
 // import { Link } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 function FeaturedCard({ project }) {
   return (
     <div className='flex flex-col sm:flex-row h-[30rem] sm:h-52 gap-5'>
       <a href={project.slug} className='rounded-lg overflow-hidden sm:flex-[1_1_0%]'>
-        <img
+        {/* <img
           className='w-full h-full object-cover hover:scale-110 transition-all'
           src={project.image}
-          alt={project.title}/>
+          alt={project.title}/> */}
+        <GatsbyImage className='w-full h-full object-cover hover:scale-110 transition-all' alt={project.title} image={project.image.asset.gatsbyImageData} />
       </a>
 
       <div className='flex flex-col gap-4 sm:flex-[2_2_0%]'>

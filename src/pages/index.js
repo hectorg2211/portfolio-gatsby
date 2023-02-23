@@ -7,17 +7,18 @@ import { graphql } from 'gatsby'
 import Layout from '../modules/Layout'
 
 const IndexPage = ({data}) => {
+  console.log(data)
   return (
     <Layout>
       <main className='flex flex-col gap-16'>
-        {data.sanityHomePage.modules.map((module, index) => {
+        {data.sanityHomePage.modules.map((module) => {
             switch (module._type) {
               case 'hero':
-                return <Hero key={index} {...module} />
-              case 'Featured':
-                return <FeaturedProjects key={index} {...module} />
+                return <Hero key={module._key} {...module} />
+              case 'featureProjects':
+                return <FeaturedProjects key={module._key} {...module} />
               case 'RecentPosts':
-                return <RecentPosts key={index} {...module} />
+                return <RecentPosts key={module._key} {...module} />
               default:
                 return null
             }
@@ -40,6 +41,7 @@ export const pageQuery = graphql`
       _updatedAt
       modules {
         ...SanityHero
+        ...SanityFeatureProjects
       }
     }
   }
