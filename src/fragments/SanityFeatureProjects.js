@@ -1,7 +1,7 @@
 import {graphql} from 'gatsby'
 
 export const SanityFeatureProjects = graphql`
-fragment SanityFeatureProjects on SanityFeatureProjects{
+fragment SanityFeatureProjects on SanityFeatureProjects {
   _key
   _type
   title
