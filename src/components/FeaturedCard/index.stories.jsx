@@ -1,5 +1,6 @@
 import React from 'react'
 import FeaturedCard from './index'
+import { gatsbyImageData } from '../../utils/testData'
 
 export default {
   component: FeaturedCard,
@@ -12,7 +13,7 @@ const Template = (args) => <FeaturedCard {...args} />
 export const Default = Template.bind({})
 Default.args = {
   project: {
-    image: 'https://picsum.photos/200/300',
+    image: gatsbyImageData,
     title: 'Project title',
     slug: 'project-title',
     year: 2022,

@@ -6,10 +6,6 @@ function FeaturedCard({ project }) {
   return (
     <div className='flex flex-col sm:flex-row h-[30rem] sm:h-52 gap-5'>
       <a href={project.slug} className='rounded-lg overflow-hidden sm:flex-[1_1_0%]'>
-        {/* <img
-          className='w-full h-full object-cover hover:scale-110 transition-all'
-          src={project.image}
-          alt={project.title}/> */}
         <GatsbyImage className='w-full h-full object-cover hover:scale-110 transition-all' alt={project.title} image={project.image.asset.gatsbyImageData} />
       </a>
 

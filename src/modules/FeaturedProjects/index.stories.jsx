@@ -1,5 +1,6 @@
 import React from 'react'
 import FeaturedProjects from './index'
+import { gatsbyImageData } from '../../utils/testData'
 
 export default {
   component: FeaturedProjects,
@@ -13,7 +14,7 @@ Default.args = {
   projects: [
     {
       id: 1,
-      image: 'https://picsum.photos/200/300',
+      image: gatsbyImageData,
       title: 'Project title',
       slug: 'project-title',
       year: 2022,
@@ -22,7 +23,7 @@ Default.args = {
     },
     {
       id: 2,
-      image: 'https://picsum.photos/200/100',
+      image: gatsbyImageData,
       title: 'Project title',
       slug: 'project-title',
       year: 2022,
@@ -31,7 +32,7 @@ Default.args = {
     },
     {
       id: 3,
-      image: 'https://picsum.photos/200/200',
+      image: gatsbyImageData,
       title: 'Project title',
       slug: 'project-title',
       year: 2022,

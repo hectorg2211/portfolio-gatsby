@@ -16,21 +16,30 @@ module.exports = {
   'core': {
     'builder': '@storybook/builder-webpack5'
   },
-  'features' : {
+  'features': {
     'interactionsDebugger': true,
     emotionAlias: false
   },
   webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.css$/i,
-      use: [
-        {
-          loader: 'postcss-loader',
-          options: { implementation: require.resolve('postcss') },
-        },
-      ],
-      include: path.resolve(__dirname, '../'),
-    })
+    config.module.rules.push(
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: 'postcss-loader',
+            options: { implementation: require.resolve('postcss') },
+          },
+        ],
+        include: path.resolve(__dirname, '../'),
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      })
     // Return the altered config
     return config
   },

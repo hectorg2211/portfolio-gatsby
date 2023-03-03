@@ -7,7 +7,6 @@ import { graphql } from 'gatsby'
 import Layout from '../modules/Layout'
 
 const IndexPage = ({data}) => {
-  console.log(data)
   return (
     <Layout>
       <main className='flex flex-col gap-16'>
@@ -17,7 +16,7 @@ const IndexPage = ({data}) => {
                 return <Hero key={module._key} {...module} />
               case 'featureProjects':
                 return <FeaturedProjects key={module._key} {...module} />
-              case 'RecentPosts':
+              case 'recentPosts':
                 return <RecentPosts key={module._key} {...module} />
               default:
                 return null
@@ -42,6 +41,7 @@ export const pageQuery = graphql`
       modules {
         ...SanityHero
         ...SanityFeatureProjects
+        ...SanityRecentPosts
       }
     }
   }
