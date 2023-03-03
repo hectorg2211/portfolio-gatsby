@@ -1,19 +1,11 @@
-import React, { ReactNode } from 'react';
-import {
-  Box,
-  Flex,
-  HStack,
-  Link,
-  IconButton,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import React from 'react'
+import { Box, Flex, HStack, IconButton, Link, Stack, useColorModeValue, useDisclosure, } from '@chakra-ui/react'
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { graphql, useStaticQuery } from 'gatsby'
 
-const Links = ['Projects', 'Blog', 'Contact'];
+const Links = ['Projects', 'Blog', 'Contact']
 
-const NavLink = ({ children }) => (
+const NavLink = ({ to, children }) => (
   <Link
     px={2}
     py={1}
@@ -22,48 +14,76 @@ const NavLink = ({ children }) => (
       textDecoration: 'none',
       color: 'tomato',
     }}
-    href={'#'}>
+    href={`/${to}`}>
     {children}
   </Link>
-);
+)
 
 export default function Simple() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { sanityHeader } = useStaticQuery(query)
 
   return (
-    <>
-      <Box bg={useColorModeValue('white', 'white')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'right'}>
+    <div className='container m-auto'>
+      <Box
+        bg={useColorModeValue('white', 'white')}
+        px={4}>
+        <Flex
+          h={16}
+          alignItems={'center'}
+          justifyContent={'right'}>
           <IconButton
             size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            icon={isOpen ? <CloseIcon/> : <HamburgerIcon/>}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-          />
-          <HStack spacing={8} alignItems={'center'}>
-            {/* <Box>Logo</Box> */}
+            onClick={isOpen ? onClose : onOpen}/>
+          <HStack
+            spacing={8}
+            alignItems={'center'}>
             <HStack
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <>
+                {sanityHeader.links.map((link) => (
+                  <NavLink key={link._key} to={link.slug.current}>{link.label}</NavLink>
+                ))}
+              </>
             </HStack>
           </HStack>
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+          <Box
+            pb={4}
+            display={{ md: 'none' }}>
+            <Stack
+              as={'nav'}
+              spacing={4}>
+              <>
+                {sanityHeader.links.map((link) => (
+                  <NavLink key={link._key} to={link.slug.current}>{link.label}</NavLink>
+                ))}
+              </>
             </Stack>
           </Box>
         ) : null}
       </Box>
-    </>
-  );
+    </div>
+  )
 }
+
+const query = graphql`
+  query Header {
+    sanityHeader {
+      links {
+        _key
+        label
+        slug {
+          current
+        }
+      }
+    }
+  }
+  `
