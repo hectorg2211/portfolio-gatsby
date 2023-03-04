@@ -2,7 +2,6 @@ import * as React from 'react'
 import Hero from '../modules/Hero'
 import FeaturedProjects from '../modules/FeaturedProjects'
 import RecentPosts from '../modules/RecentPosts'
-import Footer from '../modules/Footer'
 import { graphql } from 'gatsby'
 import Layout from '../modules/Layout'
 
