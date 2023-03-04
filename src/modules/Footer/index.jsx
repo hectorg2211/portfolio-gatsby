@@ -1,5 +1,4 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
 import IconSocial from '../../components/IconSocial'
 
 function Footer(props){
