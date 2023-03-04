@@ -24,7 +24,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   if (result.errors) throw result.errors;
   const projects = result.data.allSanityProject.nodes || [];
-  projects.forEach((project, index) => {
+  projects.forEach((project) => {
     const path = `/projects/${project.slug.current}`;
     createPage({
       path,

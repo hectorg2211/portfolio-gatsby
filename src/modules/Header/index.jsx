@@ -1,20 +1,11 @@
 import React from 'react'
-import { Box, Flex, HStack, IconButton, Link, Stack, useColorModeValue, useDisclosure, } from '@chakra-ui/react'
+import { Box, Flex, HStack, IconButton, Stack, useColorModeValue, useDisclosure, } from '@chakra-ui/react'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
-import { graphql, useStaticQuery } from 'gatsby'
-
-const Links = ['Projects', 'Blog', 'Contact']
+import { graphql, useStaticQuery, Link } from 'gatsby'
 
 const NavLink = ({ to, children }) => (
   <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      color: 'tomato',
-    }}
-    href={`/${to}`}>
+    to={`/${to}`}>
     {children}
   </Link>
 )
