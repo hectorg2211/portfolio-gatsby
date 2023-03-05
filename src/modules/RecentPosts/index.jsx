@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import PostCard from '../../components/PostCard'
 
 function RecentPosts() {
@@ -9,7 +9,7 @@ function RecentPosts() {
       <div className='container px-4 md:px-0 m-auto flex flex-col items-start '>
           <div className='flex justify-between m-auto w-full text-left pt-5'>
               <span className='text-md sm:text-2xl'>Recent posts</span>
-              <a href='/' className='font-semibold text-blue-600'>View all</a>
+              <Link to='/blog' className='font-semibold text-blue-600'>View all</Link>
 
           </div>
           <div className='flex flex-col w-full lg:flex-row gap-5 py-5 justify-center'>

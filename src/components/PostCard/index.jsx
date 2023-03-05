@@ -10,7 +10,7 @@ function PostCard({ post }) {
       <div className='flex flex-row w-full m-auto gap-3'>
         <p>{isoToReadableDate(post._updatedAt)}</p>
         <p> | </p>
-        <p>{post.labels}</p>
+        <p>{post.labels.join(', ')}</p>
       </div>
       <div>
         <p className='text-dark'>{post.text}</p>

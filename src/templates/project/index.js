@@ -1,8 +1,8 @@
-import { PortableText } from "@portabletext/react";
 import { graphql } from "gatsby";
 import React from "react";
 import { isoToReadableDate } from "../../utils/iso-to-normal-date";
 import Layout from "../../modules/layout";
+import RichText from "../../components/RichText";
 
 const Project = ({ data }) => {
   const { sanityProject } = data;
@@ -22,7 +22,7 @@ const Project = ({ data }) => {
           </span>
         </div>
 
-        <PortableText value={sanityProject._rawText} />
+        <RichText blockContent={sanityProject._rawText} />
       </main>
     </Layout>
   );
