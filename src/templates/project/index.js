@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react";
 import { isoToReadableDate } from "../../utils/iso-to-normal-date";
-import Layout from "../../modules/layout";
+import Layout from "../../modules/Layout";
 import RichText from "../../components/RichText";
 
 const Project = ({ data }) => {
