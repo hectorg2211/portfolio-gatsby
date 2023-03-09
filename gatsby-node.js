@@ -1,22 +1,11 @@
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+const createProjectPages = async (graphql, createPage) => {
   const result = await graphql(`
     query SanityProjects {
       allSanityProject {
         nodes {
-          _id
-          title
           slug {
             current
           }
-          image {
-            asset {
-              gatsbyImageData(placeholder: BLURRED)
-            }
-          }
-          year
-          type
-          _rawText
         }
       }
     }
@@ -32,4 +21,9 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { slug: project.slug.current },
     });
   });
+};
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  return await Promise.all([createProjectPages(graphql, createPage)]);
 };
