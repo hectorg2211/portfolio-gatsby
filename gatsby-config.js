@@ -1,10 +1,15 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     {
@@ -13,7 +18,7 @@ module.exports = {
         projectId: process.env.GATSBY_SANITY_PROJECT_ID,
         dataset: process.env.GATSBY_SANITY_DATASET,
         watchMode: true,
-      }
+      },
     },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
@@ -39,5 +44,5 @@ module.exports = {
         isBaseProvider: false,
       },
     },
-  ]
+  ],
 }
