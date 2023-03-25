@@ -9,6 +9,18 @@
 
 ## 🚀 Quick start
 
+**Environment variables**
+.env.development
+```
+GATSBY_SANITY_PROJECT_ID=<project-id>
+GATSBY_SANITY_DATASET=<dataset>
+```
+.env.production
+```
+GATSBY_SANITY_PROJECT_ID=<project-id>
+GATSBY_SANITY_DATASET=<dataset>
+```
+
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the minimal starter.
