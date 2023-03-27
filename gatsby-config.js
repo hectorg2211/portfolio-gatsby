@@ -44,5 +44,11 @@ module.exports = {
         isBaseProvider: false,
       },
     },
+    {
+      resolve: `gatsby-transform-portable-text`,
+      options: {
+        extendTypes: [{ typeName: `SanityPost`, contentFieldName: "content" }]
+      }
+    }
   ],
 }

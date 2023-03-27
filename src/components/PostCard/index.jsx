@@ -1,6 +1,6 @@
 import React from 'react'
 import { isoToReadableDate } from '../../utils/iso-to-normal-date'
-import {PortableText} from '@portabletext/react'
+import { PortableText } from '@portabletext/react'
 
 
 function PostCard({ post }) {
@@ -13,10 +13,7 @@ function PostCard({ post }) {
         <p>{post.labels.join(', ')}</p>
       </div>
       <div>
-        <p className='text-dark'>{post.text}</p>
-        <PortableText
-          value={post._rawContent}
-        />
+        <p className='text-dark'>{post.excerpt}</p>
       </div>
     </div>
   )

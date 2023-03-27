@@ -1,4 +1,4 @@
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 
 export const SanityRecentPosts = graphql`
   fragment SanityRecentPosts on SanityRecentPosts { 

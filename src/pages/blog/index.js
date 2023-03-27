@@ -29,6 +29,7 @@ export const pageqQuery = graphql`
         title
         labels
         _rawContent
+        excerpt(limit: 250)
       }
     }
   }
