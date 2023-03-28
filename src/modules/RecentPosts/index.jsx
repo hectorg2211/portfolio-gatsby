@@ -32,6 +32,9 @@ query RecentPost {
       id
       title
       labels
+      slug {
+        current
+      }
       excerpt(limit: 250)
       _rawContent
     }

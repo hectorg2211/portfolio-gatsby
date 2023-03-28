@@ -26,6 +26,9 @@ export const pageqQuery = graphql`
       posts: nodes {
         _updatedAt
         id
+        slug{
+          current
+        }
         title
         labels
         _rawContent
