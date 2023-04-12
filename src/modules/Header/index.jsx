@@ -25,10 +25,10 @@ export default function Simple() {
           justifyContent={'right'}>
           <IconButton
             size={'md'}
-            icon={isOpen ? <CloseIcon/> : <HamburgerIcon/>}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}/>
+            onClick={isOpen ? onClose : onOpen} />
           <HStack
             spacing={8}
             alignItems={'center'}>

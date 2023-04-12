@@ -20,6 +20,8 @@ function Blog({ data }) {
 
 export default Blog;
 
+export const Head = () => <title>Blog</title>
+
 export const pageqQuery = graphql`
   query AllPosts {
     allSanityPost {

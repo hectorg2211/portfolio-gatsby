@@ -22,6 +22,8 @@ function Projects({ data }) {
 
 export default Projects;
 
+export const Head = () => <title>Projects</title>
+
 export const pageQuery = graphql`
   query SanityProjects {
     allSanityProject {
